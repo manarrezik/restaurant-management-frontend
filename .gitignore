@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Allow these folders/files
+!src/
+!public/
+!README.md
+!package.json
+!package-lock.json
+!vite.config.ts
+!.gitignore
