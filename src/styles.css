@@ -1,0 +1,710 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1f2937;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.card-title {
+  color: gray;
+}
+
+.fake-chart {
+  height: 150px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+/* ========================================
+   RECENT ORDERS COMPONENT STYLES
+   Add these styles to your styles.css file
+   ======================================== */
+
+.recent-orders {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.orders-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Tabs */
+.orders-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f8f9fa;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #1a1a1a;
+}
+
+.tab-btn.active {
+  background: #FF6B35;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.2);
+}
+
+/* Table */
+.orders-table-container {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table thead tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orders-table th.text-right {
+  text-align: right;
+}
+
+.orders-table tbody tr {
+  border-bottom: 1px solid #f8f9fa;
+  transition: background 0.2s ease;
+}
+
+.orders-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.orders-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.order-id {
+  color: #999;
+  font-weight: 400;
+}
+
+.order-name {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.order-time {
+  color: #666;
+  font-weight: 400;
+}
+
+.order-price {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-active {
+  background: #FFF4ED;
+  color: #FF6B35;
+}
+
+.status-completed {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.status-cancelled {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .orders-table {
+    font-size: 13px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 12px 8px;
+  }
+
+  .tab-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+}
+/* ========================================
+   REVENUE CHART COMPONENT STYLES
+   Add these styles to your styles.css file
+   ======================================== */
+
+.revenue-chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.revenue-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.revenue-chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.revenue-chart-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f8f9fa;
+  padding: 4px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.revenue-tab {
+  padding: 6px 16px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.revenue-tab:hover {
+  color: #1a1a1a;
+}
+
+.revenue-tab.active {
+  background: #FF6B35;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.2);
+}
+
+/* Income Value */
+.revenue-income-value {
+  margin-bottom: 24px;
+}
+
+.revenue-income-amount {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.revenue-income-change {
+  font-size: 13px;
+  color: #2E7D32;
+  font-weight: 500;
+}
+
+/* Bar Chart */
+.revenue-bar-chart {
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+
+.revenue-chart-bars {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  height: 200px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.revenue-bar {
+  flex: 1;
+  background: #FFD4C0;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  min-height: 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.revenue-bar:hover {
+  opacity: 0.8;
+}
+
+.revenue-bar.active {
+  background: #FF6B35;
+  box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+}
+
+.revenue-bar-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.revenue-chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Chart Info */
+.revenue-chart-info {
+  margin-top: 12px;
+}
+
+.revenue-chart-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .revenue-income-amount {
+    font-size: 28px;
+  }
+
+  .revenue-chart-bars {
+    gap: 6px;
+    height: 160px;
+  }
+
+  .revenue-bar-label {
+    font-size: 10px;
+  }
+}
+/* ========================================
+   STAFF ON DUTY COMPONENT STYLES
+   Add these styles to your styles.css file
+   ======================================== */
+
+.staff-on-duty-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.staff-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.staff-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.staff-item:hover {
+  background: #f8f9fa;
+}
+
+.staff-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.staff-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.staff-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.staff-role {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.staff-rating {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .staff-on-duty-card {
+    padding: 20px;
+  }
+
+  .staff-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .staff-name {
+    font-size: 13px;
+  }
+
+  .staff-role {
+    font-size: 11px;
+  }
+
+  .staff-rating {
+    font-size: 13px;
+  }
+}
+/* ========================================
+   STATS CARD COMPONENT STYLES
+   Add these styles to your styles.css file
+   ======================================== */
+
+.stats-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.stats-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.stats-card-label {
+  font-size: 14px;
+  color: #999;
+  font-weight: 400;
+}
+
+.stats-card-menu-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.stats-card-menu-btn:hover {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.stats-card-value-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stats-card-value {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stats-card-change {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stats-card-change.positive {
+  color: #2E7D32;
+  background: #E8F5E9;
+}
+
+.stats-card-change.negative {
+  color: #C62828;
+  background: #FFEBEE;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-card {
+    padding: 16px;
+  }
+
+  .stats-card-value {
+    font-size: 28px;
+  }
+
+  .stats-card-label {
+    font-size: 13px;
+  }
+
+  .stats-card-change {
+    font-size: 12px;
+  }
+}
+.dashboard-layout {
+  display: flex;
+  background: #fff4f0;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* TOP STATS */
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* MIDDLE */
+.dashboard-middle-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* BOTTOM */
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+.top-categories-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.top-categories-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.top-categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.top-category-item {
+  display: flex;
+  align-items: center;
+  background: #fff7f4;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.top-category-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.top-category-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.top-category-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.top-category-percent {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
