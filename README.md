@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7b8548b71c512b17147ec82c7d9baacf78aa299f
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +75,36 @@ export default defineConfig([
   },
 ])
 ```
+<<<<<<< HEAD
+=======
+=======
+# Restaurant Management Dashboard (Frontend)
+
+A frontend web application designed to help small restaurants manage tables, menu items, and orders efficiently.
+
+This project focuses on user experience, state management, and realistic business workflows.
+
+## Features (MVP)
+- Table management (available / occupied)
+- Menu management (items, prices, categories)
+- Order creation per table
+- Order status tracking (In Progress, Served, Paid)
+- Automatic total calculation
+- Data persistence using localStorage
+
+## Tech Stack
+- React
+- JavaScript (or TypeScript)
+- CSS / Tailwind CSS
+- Vite
+
+## Project Status
+🚧 In progress
+
+## Future Improvements
+- Role-based UI (admin / waiter)
+- Kitchen view
+- Statistics dashboard
+- Backend integration
+>>>>>>> b890a91837ac975a618d8a8b6703731fe3941848
+>>>>>>> 7b8548b71c512b17147ec82c7d9baacf78aa299f
